@@ -15,5 +15,13 @@ class OLSRegressor():
         Parameters
         ----------
         X : {array-like matrix} of shape (n_examples, n_features)
-            Dataset that will be used at the training data by the model.
-        
+            Dataset that will be used as the feature values to train the model.
+
+        y : array-like matrix of shape (n_examples, n_targets)
+            Dataset that will be used as the target values to train the model.
+
+        Returns
+        -------
+        self : object
+            Fitted Estimator.
+        """
