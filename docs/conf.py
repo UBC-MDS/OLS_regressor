@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"aussie_car_prices"
+project = u"ols_regressor"
 copyright = u"2024, Charles Xu"
 author = u"Charles Xu"
 

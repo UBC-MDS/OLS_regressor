@@ -5,7 +5,7 @@ Ausis Car Price Regressor
 ## Installation
 
 ```bash
-$ pip install aussie_car_prices
+$ pip install ols_regressor
 ```
 
 ## Usage
