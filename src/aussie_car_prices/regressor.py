@@ -15,7 +15,7 @@ class LinearRegressor:
         
         Parameters
         ----------
-        X : {array-like matrix} of shape (n_samples, n_features)
+        X : array-like matrix of shape (n_samples, n_features)
             Feature values that will be used to make predictions.
         
         Returns
@@ -25,5 +25,21 @@ class LinearRegressor:
         """
         pass
 
-    def score(self, X, y):
+    def score(self, y_true, y_pred):
+        """
+        Calculates the coefficient of determination R^2 for the prediction.
+
+        Parameters
+        ----------
+        y_true : array-like matrix, shape (n_samples, n_targets)
+            True target values.
+
+        y_pred : array-like matrix, shape (n_samples, n_targets)
+            Predicted target values.
+
+        Returns
+        -------
+        r2_score : float
+            Coefficient of determination R^2.
+        """
         pass
