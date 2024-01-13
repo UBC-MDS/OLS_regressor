@@ -32,8 +32,8 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`aussie_car_prices` was created by Charles Xu. It is licensed under the terms of the MIT license.
+`OLS_Regressor` is licensed under the terms of the MIT license.
 
 ## Credits
 
-`aussie_car_prices` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`OLS_Regressor` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
