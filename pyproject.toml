@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "aussie_car_prices"
+name = "ols_regressor"
 version = "0.1.0"
 description = "Ausis Car Price Regressor"
 authors = ["Charles Xu"]
