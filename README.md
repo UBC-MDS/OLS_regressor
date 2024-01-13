@@ -14,6 +14,7 @@ $ pip install ols_regressor
 - `fit`: Fits the linear model according to the OLS mechanism.
 - `predict`: Predicts target values using the fitted linear model.
 - `score`: Calculates the coefficient of determination R-squared value for the prediction.
+- `cross_validate`: Performs cross-validated Ordinary Least Squares (OLS) regression.
 
 ## `OLS_Regressor` use in Python ecosystem
 The OLS Regression Package seamlessly integrates into the rich Python ecosystem, offering a specialized solution for Ordinary Least Squares (OLS) regression analysis. While various Python libraries provide general-purpose machine learning and statistical functionalities, our package focuses specifically on the simplicity and efficiency of linear regression. scikit-learn is a widely used machine learning library that encompasses regression among its many capabilities [`scikit-learn`](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning). Our package distinguishes itself by providing a lightweight and user-friendly interface tailored for users seeking a straightforward solution for OLS regression without the overhead of extensive machine learning or statistical functionalities. If you find that your needs align more closely with a broader set of machine learning tools or comprehensive statistical modeling, scikit-learn or statsmodels may be suitable alternatives. As of [2024-01-12], no existing package caters specifically to OLS regression with our package's emphasis on simplicity and ease of use.
