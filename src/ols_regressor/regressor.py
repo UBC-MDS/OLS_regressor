@@ -48,6 +48,10 @@ class LinearRegressor():
         if X_np.shape[0] != y_np.shape[0]:
             raise ValueError("The number of examples in X and y should be equal.")
 
+        if X_np.shape[0] < X_np.shape[1]:
+            raise ValueError("The number of examples in X should be greater than the number of features.")
+
+        
         self.coef = np.linalg.inv(X_np.T @ X_np) @ X_np.T @ y_np
         return self.coef
 
