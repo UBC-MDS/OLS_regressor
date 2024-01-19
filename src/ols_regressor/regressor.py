@@ -66,4 +66,3 @@ class LinearRegressor:
         r2_score : float
             Coefficient of determination R^2.
         """
-        pass
