@@ -65,7 +65,33 @@ class LinearRegressor():
         predictions : array-like matrix of shape (n_samples, n_targets)
             Predicted target values for the input feature values.
         """
-        pass
+        if self.coef is None:
+            raise ValueError("Model not fitted. Call fit first.")
+
+        X = np.array(X)
+
+        # Check if dimensions of X are correct
+        if X.ndim != 2:
+            raise ValueError("X should be a 2D array.")
+
+        # Check if the number of features in X equals to the number of coefficients
+        if X.shape[1] != len(self.coef):
+            raise ValueError("The number of features in X should be equal to the number of coefficients.")
+        
+        # Check if non-numeric values exist in input
+        if not np.issubdtype(X.dtype, np.number):
+            raise ValueError("Input contains non-numeric values.")
+            
+        # Check if NaN values exist in input
+        if np.isnan(X).any():
+            raise ValueError("Input contains NaN values.")
+        
+        # check if infinite values exist in input
+        if not np.isfinite(X).all():
+            raise ValueError("Input contains infinite values.")
+
+        pred = X @ self.coef
+        return pred
 
     def score(self, y_true, y_pred):
         """
