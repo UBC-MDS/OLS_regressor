@@ -12,6 +12,7 @@ class LinearRegressor:
     examples in the dataset.
     """
     def __init__(self):
+        self.coef = None
         pass
 
     def fit(self, X, y):
@@ -31,7 +32,9 @@ class LinearRegressor:
         self : object
             Fitted Estimator.
         """
-        pass
+        X_np = np.array(X)
+        self.coef = np.linalg.inv(X_np.T @ X_np) @ X_np.T @ y
+        return self
 
     def predict(self, X):
         """
