@@ -1,1 +1,0 @@
-from ols_regressor.regressor import LinearRegressor
