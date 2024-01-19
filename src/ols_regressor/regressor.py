@@ -97,43 +97,39 @@ class LinearRegressor():
         pred = X @ self.coef
         return pred
 
-    def score(self, df, true_column, pred_column):
+    def score(self, X, y):
         """
-            Calculates the coefficient of determination R^2 for the prediction.
+        Calculates the coefficient of determination R^2 for the prediction.
 
-            Parameters
-            ----------
-            y_true : array-like matrix, shape (n_samples, n_targets)
+        Parameters
+        ----------
+        X : array-like matrix, shape (n_samples, n_features)
+            Feature dataset.
+
+        y : array-like matrix, shape (n_samples, )
             True target values.
 
-            y_pred : array-like matrix, shape (n_samples, n_targets)
-            Predicted target values.
-
-            Returns
-            -------
-            r2_score : float
-                Coefficient of determination R^2.
+        Returns
+        -------
+        r2_score : float
+            Coefficient of determination R^2.
         """
-        if not isinstance(df, pd.DataFrame):
-            raise TypeError("Input must be a pandas DataFrame")
+        # Ensure y is a numpy array
+        y_true = np.array(y)
 
-        if df.empty or len(df) < 2:
-            raise ValueError("DataFrame must have at least two data points")
+        # Predict the y values using the model
+        y_pred = self.predict(X)
 
-        y_true = df[true_column].values
-        y_pred = df[pred_column].values
-
-        #  Calculate mean value of y_true
+        # Calculate the mean of the true y values
         y_true_mean = np.mean(y_true)
 
-        # Calculat（SST）
+        # Calculate the Total Sum of Squares (SST)
         SST = np.sum((y_true - y_true_mean) ** 2)
 
-        # Calculate（SSE）
+        # Calculate the Sum of Squared Errors (SSE)
         SSE = np.sum((y_true - y_pred) ** 2)
 
         # Calculate R^2
         r2 = 1 - (SSE / SST)
 
         return r2
-

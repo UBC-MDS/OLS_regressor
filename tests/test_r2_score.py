@@ -4,37 +4,50 @@ import pytest
 from ols_regressor.regressor import LinearRegressor
 
 
-def test_r2_score():
+def test_score_method():
+    # Setup Test Data
+    X = np.array([[1, 2], [3, 4]])  
+    y = np.array([1, 2])  
 
-    # create a data fram for pytest
-    df = pd.DataFrame({
-        'y_true': [1, 2, 3, 4],
-        'y_pred': [1, 2, 3, 4]
-    })
+    model = LinearRegressor()
 
-    # calculate the expected r^2 
-    expected_r2_score = 1.0
+    model.predict = lambda x: np.array([0.9, 2.1])  
 
-    calculated_r2_score = LinearRegressor().score(df, 'y_true', 'y_pred')
+    # Calculate Expected R^2
+    y_pred = model.predict(X)
+    y_true_mean = np.mean(y)
+    SST = np.sum((y - y_true_mean) ** 2)
+    SSE = np.sum((y - y_pred) ** 2)
+    expected_r2 = 1 - (SSE / SST)
 
-    assert calculated_r2_score == expected_r2_score
+    # Call the score method
+    calculated_r2 = model.score(X, y)
 
-def test_empty_data():
-    df = pd.DataFrame({'y_true': [], 'y_pred': []})
-    with pytest.raises(ValueError):  
-        LinearRegressor().score(df, 'y_true', 'y_pred')
+    assert np.isclose(calculated_r2, expected_r2), f"Expected R^2: {expected_r2}, but got: {calculated_r2}"
 
-def test_single_point():
-    df = pd.DataFrame({'y_true': [1], 'y_pred': [1]})
-    with pytest.raises(ValueError):  
-        LinearRegressor().score(df, 'y_true', 'y_pred')
+# Test with Incorrect Input Shapes
+def test_score_incorrect_input_shapes():
+    model = LinearRegressor()
+    X = np.array([[1, 2, 3]])  
+    y = np.array([1])
+    with pytest.raises(ValueError):
+        model.score(X, y)
 
-def test_input_not_dataframe():
-    with pytest.raises(TypeError):  
-        LinearRegressor().score("not a dataframe", 'y_true', 'y_pred')
-
+# Test with Missing Columns
 def test_missing_columns():
-    df = pd.DataFrame({'y_true': [1, 2, 3]})
-    with pytest.raises(KeyError):  
-        LinearRegressor().score(df, 'y_true', 'y_pred')
+    model = LinearRegressor()
 
+    X_missing_columns = np.array([[1], [3]])
+    y = np.array([1, 2])
+
+    with pytest.raises(ValueError):  
+        model.score(X_missing_columns, y)
+
+# Test with Empty Data
+def test_empty_data():
+    model = LinearRegressor()
+    X_empty = np.array([]).reshape(0, 0)
+    y_empty = np.array([])
+
+    with pytest.raises(ValueError):
+        model.score(X_empty, y_empty)
