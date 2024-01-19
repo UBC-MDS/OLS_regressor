@@ -1,11 +1,7 @@
 import pandas as pd
 import pytest
-import sys
-import os
 import numpy as np
-
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-from src.regressor import LinearRegressor
+from ols_regressor.regressor import LinearRegressor
 
 X_train = np.array([[1, 3], [5, 7], [9, 2]])
 y_train = np.array([4, 6, 8])
