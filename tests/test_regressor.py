@@ -16,7 +16,7 @@ def test_fit_input_X_2D():
 # Test: y should be a 1D array
 def test_fit_input_y_1D():
     model = LinearRegressor()
-    X = np.array([[1, 2, 3], [4, 5, 6]])
+    X = np.array([[1, 2], [4, 5]])
     y = np.array([[7, 8]])
     with pytest.raises(ValueError, match="y should be a 1D array."):
         model.fit(X, y)
@@ -49,3 +49,10 @@ def test_fit_matrix_rectanlge():
     with pytest.raises(ValueError, match="The number of examples in X should be greater than the number of features."):
         model.fit(X, y)
     # assert np.allclose(coefficients, np.array([23.,  70., -42.]))
+
+def test_fit_matrix_rectangle_works():
+    model = LinearRegressor()
+    X = np.array([[1, 2, 3], [4, 5, 8], [11, 23, 34]])
+    y = np.array([7, 8, 10])
+    coefficients = model.fit(X, y)
+    assert np.allclose(coefficients, np.array([-80., -288., 221.]))
