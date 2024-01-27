@@ -15,7 +15,7 @@ class LinearRegressor():
         self.coef = None
         pass
 
-    def fit(self, X, y):
+    def fit(self, X, y, lambda_reg=0.1):
         X_np = np.array(X)
         y_np = np.array(y)
 
@@ -39,7 +39,6 @@ class LinearRegressor():
         X_normalized = np.hstack((np.ones((X_normalized.shape[0], 1)), X_normalized))
 
         # Fit OLS with regularization (you can adjust the regularization parameter)
-        lambda_reg = 0.1
         self.coef = np.linalg.inv(X_normalized.T @ X_normalized + lambda_reg * np.eye(X_normalized.shape[1])) @ X_normalized.T @ y_np
 
         return self.coef
@@ -83,7 +82,9 @@ class LinearRegressor():
         if not np.isfinite(X).all():
             raise ValueError("Input contains infinite values.")
 
-        pred = X @ self.coef[1:]
+        X = np.hstack((np.ones((X.shape[0], 1)), X))
+
+        pred = X @ self.coef
         return pred
 
 
