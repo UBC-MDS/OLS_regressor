@@ -15,26 +15,7 @@ class LinearRegressor():
         self.coef = None
         pass
 
-    def fit(self, X, y):
-        """
-        Fits the linear model according to the OLS mechanism.
-
-        Parameters
-        ----------
-        X : {array-like matrix} of shape (n_examples, n_features)
-            Dataset that will be used as the feature values to train the model.
-
-        y : array-like matrix of shape (n_examples, n_targets)
-            Dataset that will be used as the target values to train the model.
-
-        Returns
-        -------
-        self : object
-            Fitted Estimator.
-        """
-        # X_np = np.array(X)
-        # self.coef = np.linalg.inv(X_np.T @ X_np) @ X_np.T @ y
-        # return self
+    def fit(self, X, y, lambda_reg=0.1):
         X_np = np.array(X)
         y_np = np.array(y)
 
@@ -51,8 +32,15 @@ class LinearRegressor():
         if X_np.shape[0] < X_np.shape[1]:
             raise ValueError("The number of examples in X should be greater than the number of features.")
 
-        
-        self.coef = np.linalg.inv(X_np.T @ X_np) @ X_np.T @ y_np
+        # Normalize input features
+        X_normalized = (X_np - X_np.mean(axis=0)) / X_np.std(axis=0)
+
+        # Add a column of ones for the intercept term
+        X_normalized = np.hstack((np.ones((X_normalized.shape[0], 1)), X_normalized))
+
+        # Fit OLS with regularization (you can adjust the regularization parameter)
+        self.coef = np.linalg.inv(X_normalized.T @ X_normalized + lambda_reg * np.eye(X_normalized.shape[1])) @ X_normalized.T @ y_np
+
         return self.coef
 
     def predict(self, X):
@@ -79,7 +67,7 @@ class LinearRegressor():
             raise ValueError("X should be a 2D array.")
 
         # Check if the number of features in X equals to the number of coefficients
-        if X.shape[1] != len(self.coef):
+        if X.shape[1] != len(self.coef)-1:
             raise ValueError("The number of features in X should be equal to the number of coefficients.")
         
         # Check if non-numeric values exist in input
@@ -94,8 +82,11 @@ class LinearRegressor():
         if not np.isfinite(X).all():
             raise ValueError("Input contains infinite values.")
 
+        X = np.hstack((np.ones((X.shape[0], 1)), X))
+
         pred = X @ self.coef
         return pred
+
 
     def score(self, X, y):
         """
