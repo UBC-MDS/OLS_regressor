@@ -3,7 +3,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = aussie_car_prices
+SPHINXPROJ    = ols_regressor
 SOURCEDIR     = .
 BUILDDIR      = _build
 
