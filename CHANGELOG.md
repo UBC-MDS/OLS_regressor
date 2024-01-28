@@ -4,4 +4,4 @@
 
 ## v0.1.0 (10/01/2024)
 
-- First release of `aussie_car_prices`!
+- First release of `ols_regressor`
