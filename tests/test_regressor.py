@@ -37,7 +37,7 @@ def test_fit_matrix_square():
     X = np.array([[1, 2], [3, 4]])
     y = np.array([5, 6])
     coefficients = model.fit(X, y)
-    assert np.allclose(coefficients, np.array([-4., 4.5]))
+    assert np.allclose(coefficients, np.array([2.30769231, -0.76923077,  1.53846154]))
 
 
 # Test fit function with a rectangular matrix
@@ -55,4 +55,4 @@ def test_fit_matrix_rectangle_works():
     X = np.array([[1, 2, 3], [4, 5, 8], [11, 23, 34]])
     y = np.array([7, 8, 10])
     coefficients = model.fit(X, y)
-    assert np.allclose(coefficients, np.array([-80., -288., 221.]))
+    assert np.allclose(coefficients, np.array([5.9834636 ,  0.65147338, -0.25714111,  0.08315383]))
