@@ -40,10 +40,10 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `aussie_car_prices` for local development.
+Ready to contribute? Here's how to set up `ols_regressor` for local development.
 
-1. Download a copy of `aussie_car_prices` locally.
-2. Install `aussie_car_prices` using `poetry`:
+1. Download a copy of `ols_regressor` locally.
+2. Install `ols_regressor` using `poetry`:
 
     ```console
     $ poetry install
@@ -69,5 +69,5 @@ Before you submit a pull request, check that it meets these guidelines:
 
 ## Code of Conduct
 
-Please note that the `aussie_car_prices` project is released with a
+Please note that the `ols_regressor` project is released with a
 Code of Conduct. By contributing to this project you agree to abide by its terms.
