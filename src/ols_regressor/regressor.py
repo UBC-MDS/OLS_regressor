@@ -32,9 +32,6 @@ class LinearRegressor():
         if X_np.shape[0] < X_np.shape[1]:
             raise ValueError("The number of examples in X should be greater than the number of features.")
 
-        # Normalize input features
-        X_normalized = (X_np - X_np.mean(axis=0)) / X_np.std(axis=0)
-
         # Add a column of ones for the intercept term
         X_normalized = np.hstack((np.ones((X_normalized.shape[0], 1)), X_normalized))
 
