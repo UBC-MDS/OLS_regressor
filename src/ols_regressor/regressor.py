@@ -33,10 +33,10 @@ class LinearRegressor():
             raise ValueError("The number of examples in X should be greater than the number of features.")
 
         # Add a column of ones for the intercept term
-        X_normalized = np.hstack((np.ones((X_normalized.shape[0], 1)), X_normalized))
+        X_np = np.hstack((np.ones((X_np.shape[0], 1)), X_np))
 
         # Fit OLS with regularization (you can adjust the regularization parameter)
-        self.coef = np.linalg.inv(X_normalized.T @ X_normalized + lambda_reg * np.eye(X_normalized.shape[1])) @ X_normalized.T @ y_np
+        self.coef = np.linalg.inv(X_np.T @ X_np + lambda_reg * np.eye(X_np.shape[1])) @ X_np.T @ y_np
 
         return self.coef
 
