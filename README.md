@@ -6,9 +6,42 @@
 The OLS Regression Package is a Python library designed to streamline the process of performing Ordinary Least Squares (OLS) regression analysis. Whether you're a data scientist, researcher, or analyst, this package aims to provide a simple and efficient tool for fitting linear models to your data. It will fit a linear model with coefficients w = (w1, w2, ..., wn) to minimize Residual Sum of Squares (RSS) between the observed targets values in the dataset, and the targets predicted by the linear approximation for the examples in the dataset.
 
 ## Installation
-
+### Install the package from PyPi
+Run this command to install the `ols_regressor` package from PyPi
 ```bash
 $ pip install ols_regressor
+```
+
+### Install the package from GitHub
+Run the following commands to install from GitHub if the installation is unsuccessful from PyPi.
+
+**Clone the repository**
+Open your terminal, navigate to where you would like the repository to be cloned and run the following command:
+```bash
+$ git clone git@github.com:UBC-MDS/OLS_regressor.git
+```
+
+**Create the conda environment and activate it**
+Run the following command to create the conda environment which will include the necessary Python and Poetry versions and dependencies:
+```bash
+conda env create -f environment.yml
+```
+
+Next, run the following command to activate the conda environment we created:
+```bash
+conda activate `ols_regressor`
+```
+
+**Install the package using Poetry**
+Run the following command to install the package `ols_regressor`:
+```bash
+poetry install
+```
+
+## Running the tests for the package functions
+Navigate to the root directory of the project and run the following command in your terminal to run the tests for the functions:
+```bash
+pytest tests/*
 ```
 
 ## Functions
