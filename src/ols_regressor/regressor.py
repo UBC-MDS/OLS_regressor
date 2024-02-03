@@ -12,10 +12,43 @@ class LinearRegressor():
     examples in the dataset.
     """
     def __init__(self):
+        """
+        Initializes a new instance of the LinearRegressor class.
+
+        Attributes
+        ----------
+        coef : numpy.ndarray or None
+            The coefficients of the linear regression model. It is initialized as 
+            None and gets its value after the `fit` method is successfully called.
+            The first element is the intercept, followed by the coefficients for 
+            each feature in the dataset.
+        """    
         self.coef = None
         pass
 
     def fit(self, X, y, lambda_reg=0.1):
+        """
+        Fits the linear regression model.
+
+        Parameters
+        ----------
+        X : array-like matrix of shape (n_samples, n_features)
+            Feature values that will be used to fit the linear regression model.
+
+        y : array-like matrix of shape (n_samples,)
+            Target values associated with each sample in X.
+
+        lambda_reg : float, optional
+            The regularization strength (L2 penalty). Must be a positive float. 
+            Larger values specify stronger regularization. The default value is 0.1.
+
+        Returns
+        -------
+        self.coef : numpy.ndarray
+            Returns the instance itself. The fitted linear regression model 
+            coefficients, the first element is the intercept, followed by the 
+            coefficients for each feature in the dataset.
+        """
         X_np = np.array(X)
         y_np = np.array(y)
 
