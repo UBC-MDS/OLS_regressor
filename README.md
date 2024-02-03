@@ -24,7 +24,7 @@ $ git clone git@github.com:UBC-MDS/OLS_regressor.git
 **Create the conda environment and activate it**
 Run the following command to create the conda environment which will include the necessary Python and Poetry versions and dependencies:
 ```bash
-conda env create -f environment.yml
+conda env create --name ols_regressor python=3.9 poetry==1.7.1 -y
 ```
 
 Next, run the following command to activate the conda environment we created:
