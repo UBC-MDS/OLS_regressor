@@ -88,6 +88,14 @@ results = cross_validate(model, X, y, cv=5)  # cv is the number of folds
 print("Cross-validation results:", results)
 ```
 
+## Auto-test
+
+To run the auto-test supported by `pytest`, simply run the following command in the terminal or commandline tools:
+
+```bash
+pytest test/
+```
+
 ## `OLS_Regressor` use in Python ecosystem
 
 The OLS Regression Package seamlessly integrates into the rich Python ecosystem, offering a specialized solution for Ordinary Least Squares (OLS) regression analysis. While various Python libraries provide general-purpose machine learning and statistical functionalities, our package focuses specifically on the simplicity and efficiency of linear regression. scikit-learn is a widely used machine learning library that encompasses regression among its many capabilities [`scikit-learn`](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning). Our package distinguishes itself by providing a lightweight and user-friendly interface tailored for users seeking a straightforward solution for OLS regression without the overhead of extensive machine learning or statistical functionalities. If you find that your needs align more closely with a broader set of machine learning tools or comprehensive statistical modeling, scikit-learn or statsmodels may be suitable alternatives. As of [2024-01-12], no existing package caters specifically to OLS regression with our package's emphasis on simplicity and ease of use.
