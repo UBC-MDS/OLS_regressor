@@ -9,6 +9,9 @@
 ![version](https://img.shields.io/github/v/release/UBC-MDS/OLS_regressor) 
 ![release](https://img.shields.io/github/release-date/UBC-MDS/OLS_regressor)
 
+![OLS_Regressor](/docs/logo.jpg)
+
+
 ## About
 
 The OLS Regression Package is a Python library designed to streamline the process of performing Ordinary Least Squares (OLS) regression analysis. Whether you're a data scientist, researcher, or analyst, this package aims to provide a simple and efficient tool for fitting linear models to your data. It will fit a linear model with coefficients w = (w1, w2, ..., wn) to minimize Residual Sum of Squares (RSS) between the observed targets values in the dataset, and the targets predicted by the linear approximation for the examples in the dataset.
@@ -34,7 +37,7 @@ This guide provides a quick start to using the OLS_Regressor package, specifical
 
 ```Python
 from OLS_Regressor.regressor import LinearRegressor
-from ols_regressor.cross_validate import cross_validate
+from Ols_regressor.cross_validate import cross_validate
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import make_regression
 ```
@@ -107,3 +110,16 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 ## Credits
 
 `OLS_Regressor` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+
+## References
+Giriyewithana, N. (2023). Australian Vehicle Prices [Data set]. Kaggle. https://www.kaggle.com/datasets/nelgiriyewithana/australian-vehicle-prices
+
+Michael, B. (2023, February 23). How Does Linear Regression Really Work. Towards Data Science. https://towardsdatascience.com/how-does-linear-regression-really-work-2387d0f11e8
+
+scikit-learn: Machine Learning in Python. https://scikit-learn.org/stable/
+
+pandas: A Foundational Python Library for Data Analysis and Statistics. https://pandas.pydata.org/
+
+pytest: helps you write better programs https://pytest.org/
+
+
