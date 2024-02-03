@@ -2,6 +2,45 @@
 
 
 
+## v0.4.4 (2024-02-03)
+
+### Fix
+
+* fix: auto-test directory in README.md ([`368ea53`](https://github.com/UBC-MDS/OLS_regressor/commit/368ea53c3023d1f9cc2ecb8fc37057d0633d90a1))
+
+### Unknown
+
+* Merge pull request #87 from UBC-MDS/fix_readme_peer-review
+
+Fix readme peer review ([`f66f003`](https://github.com/UBC-MDS/OLS_regressor/commit/f66f003d4ba3b870373c9a99a652c108dfad577d))
+
+* Merge with updated main ([`72826b3`](https://github.com/UBC-MDS/OLS_regressor/commit/72826b383648ca1d92245c76d13363c433e07fba))
+
+* Merge pull request #61 from UBC-MDS/fix_readme_peer-review
+
+Package installation and function testing instructions ([`28509c5`](https://github.com/UBC-MDS/OLS_regressor/commit/28509c584cf447a9cd0d73e6356adf7c686e79b2))
+
+* Update README.md to remove pytest command ([`cd2efbb`](https://github.com/UBC-MDS/OLS_regressor/commit/cd2efbb989357b89952fe6e572a3736b1c308f6b))
+
+* Merge branch &#39;main&#39; into fix_readme_peer-review ([`bab1396`](https://github.com/UBC-MDS/OLS_regressor/commit/bab13963a62e0ee478521c0da8eecbb86166a835))
+
+* Merge pull request #86 from UBC-MDS/sifanzzz-patch-1
+
+Update README.md ([`5f797bd`](https://github.com/UBC-MDS/OLS_regressor/commit/5f797bd4050f9925195d0b3022b0289ed935fcbf))
+
+* Update README.md
+
+beautify README.md ([`0d2ca80`](https://github.com/UBC-MDS/OLS_regressor/commit/0d2ca80d39f100b49abb616a9702fa9b8d5742ed))
+
+* Merge pull request #85 from UBC-MDS/update_reademe
+
+Update README.md ([`3822412`](https://github.com/UBC-MDS/OLS_regressor/commit/3822412475d44639ae023203c252923f57b0f517))
+
+* Update README.md
+
+update logo ([`d1f30d2`](https://github.com/UBC-MDS/OLS_regressor/commit/d1f30d27ab952e1b39b24c5dc3bcfd93b647a2d1))
+
+
 ## v0.4.3 (2024-02-03)
 
 ### Fix
@@ -41,6 +80,8 @@ doc: update readme ([`69aa0dc`](https://github.com/UBC-MDS/OLS_regressor/commit/
 
 Docstring ([`aa07f9d`](https://github.com/UBC-MDS/OLS_regressor/commit/aa07f9d8484d03f8386055933d98b54dc59f0e88))
 
+* Merge branch &#39;main&#39; into fix_readme_peer-review ([`21b9760`](https://github.com/UBC-MDS/OLS_regressor/commit/21b9760f618d6a520a85f800722cd0b325115944))
+
 * Merge pull request #64 from UBC-MDS/update_readme
 
 Update README.md ([`a65850d`](https://github.com/UBC-MDS/OLS_regressor/commit/a65850dc727f7a98baeb5e6b6a29e95bad9ac8fc))
@@ -65,6 +106,12 @@ Update README.md ([`a65850d`](https://github.com/UBC-MDS/OLS_regressor/commit/a6
 * Merge pull request #63 from UBC-MDS/add_badges
 
 fix: add more badges to README.md ([`142610c`](https://github.com/UBC-MDS/OLS_regressor/commit/142610cb05dec1c85b51d5f4e1e078dd2c6a1617))
+
+* Update pyproject.toml with names of all authors ([`80a29c3`](https://github.com/UBC-MDS/OLS_regressor/commit/80a29c30d1080b2469f06e6b878577360cb43c7d))
+
+* Update README.md to no installation instructions without environment.yml file ([`5e9b0e4`](https://github.com/UBC-MDS/OLS_regressor/commit/5e9b0e433c05bda201ea82893a8ca80ee67bbc01))
+
+* Update README.md to include package installation and function testing instructions ([`68aa8b3`](https://github.com/UBC-MDS/OLS_regressor/commit/68aa8b3c305079c8ee30ec9fdcea5ea69d46ee78))
 
 
 ## v0.4.0 (2024-01-31)
@@ -167,6 +214,8 @@ fixing fit function and adding in description in example file ([`41a952f`](https
 * Merge pull request #50 from UBC-MDS/preprocess_ipynb
 
 fix preprocess ([`145e37a`](https://github.com/UBC-MDS/OLS_regressor/commit/145e37a11a3fe13baba3c177c091bd8e26a6fc24))
+
+* merged with main after cross-validate doc PR merged with main ([`1329b07`](https://github.com/UBC-MDS/OLS_regressor/commit/1329b07352650ecf39bcc2223be7d6d210395ef4))
 
 * Merge pull request #49 from UBC-MDS/cross_validate_doc
 
