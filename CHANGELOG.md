@@ -2,6 +2,37 @@
 
 
 
+## v0.4.3 (2024-02-03)
+
+### Fix
+
+* fix: add citations and logo ([`8633d93`](https://github.com/UBC-MDS/OLS_regressor/commit/8633d9337506ebae2ba11cd9e90e6f484cf64b85))
+
+### Unknown
+
+* Merge pull request #84 from UBC-MDS/citation
+
+fix: add citations and logo ([`89391e6`](https://github.com/UBC-MDS/OLS_regressor/commit/89391e6c75394c824776141d66406bd3dc915539))
+
+* Merge branch &#39;main&#39; into citation ([`e4996e1`](https://github.com/UBC-MDS/OLS_regressor/commit/e4996e1fd790b8e9395aac2ae5c69bfce837899e))
+
+* Merge pull request #82 from UBC-MDS/update_readme
+
+doc: update readme and example ([`77f9227`](https://github.com/UBC-MDS/OLS_regressor/commit/77f9227f5c01c305035a141af0d01b9ce2939af1))
+
+* add comments to cross_valideate tests ([`3eac906`](https://github.com/UBC-MDS/OLS_regressor/commit/3eac906d48e54bfc4a152a9badf5b04cf1d497f0))
+
+* doc: update readme and example ([`baea020`](https://github.com/UBC-MDS/OLS_regressor/commit/baea0200611231afc537d1caccbfc75770d3ba56))
+
+* Update pyproject.toml ([`2037246`](https://github.com/UBC-MDS/OLS_regressor/commit/2037246ab3fb089e876318ee2557efcd8a22481b))
+
+* Merge pull request #77 from UBC-MDS/update_readme
+
+doc: update readme ([`69aa0dc`](https://github.com/UBC-MDS/OLS_regressor/commit/69aa0dc5b42fb53ed7a59cc9e48437a20c7bdb90))
+
+* doc: update readme ([`2134d85`](https://github.com/UBC-MDS/OLS_regressor/commit/2134d85b4a5f7917247858c7ab1d123af4bb90b3))
+
+
 ## v0.4.2 (2024-02-03)
 
 ### Unknown
