@@ -22,6 +22,11 @@ class LinearRegressor():
             None and gets its value after the `fit` method is successfully called.
             The first element is the intercept, followed by the coefficients for 
             each feature in the dataset.
+
+        Example
+        -------
+        lr = LinearRegressor()
+        lr.coef
         """    
         self.coef = None
         pass
@@ -44,10 +49,18 @@ class LinearRegressor():
 
         Returns
         -------
-        self.coef : numpy.ndarray
+        self : object
             Returns the instance itself. The fitted linear regression model 
             coefficients, the first element is the intercept, followed by the 
             coefficients for each feature in the dataset.
+
+        Example
+        -------
+        X = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+        y = np.array([10, 11, 12])
+        lr = LinearRegressor()
+        lr.fit(X, y)
+        lr.coef
         """
         X_np = np.array(X)
         y_np = np.array(y)
@@ -86,6 +99,11 @@ class LinearRegressor():
         -------
         predictions : array-like matrix of shape (n_samples, n_targets)
             Predicted target values for the input feature values.
+
+        Example
+        -------
+        X_new = np.array([[2, 4, 6], [8, 10, 12]])
+        lr.predict(X_new)
         """
         if self.coef is None:
             raise ValueError("Model not fitted. Call fit first.")
@@ -134,6 +152,12 @@ class LinearRegressor():
         -------
         r2_score : float
             Coefficient of determination R^2.
+
+        Example
+        -------
+        X_test = np.array([[1, 3, 5], [7, 9, 0], [2, 4, 6]])
+        y_test = np.array([8, 10, 1])
+        lr.score(X_test, y_test)
         """
         # Ensure y is a numpy array
         y_true = np.array(y)

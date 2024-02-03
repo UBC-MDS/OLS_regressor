@@ -1,8 +1,6 @@
-
 from numpy import random
 import numpy as np
 import time
-
 
 def cross_validate(model, X, y, cv=5, random_state=None):
     """
@@ -11,26 +9,34 @@ def cross_validate(model, X, y, cv=5, random_state=None):
     Parameters
     ----------
     model : str
-            Name of the model to run cross_validate with 
-            (it will be OLS in this case)
+        Name of the model to run cross_validate with 
+        (it will be OLS in this case)
     
     X : array-like matrix of shape (n_examples, n_features)
-            Dataset that will be used as the feature values to train the model.
+        Dataset that will be used as the feature values to train the model.
     
     y : array-like matrix of shape (n_examples, n_targets)
-            Dataset that will be used as the target values to train the model.
+        Dataset that will be used as the target values to train the model.
     
     cv : (int, optional)
-            Number of cross-validation folds. Default is 5.
+        Number of cross-validation folds. Default is 5.
     
     random_state : (int or None, optional) 
-                    Seed for reproducibility. Default is None.
-
+        Seed for reproducibility. Default is None.
 
     Returns
     -------
-    scores : A dict of arrays containing the score/time arrays for 
-    each scorer is returned.
+    scores : dict
+        A dictionary of arrays containing the score/time arrays for each scorer is returned.
+
+    Example
+    -------
+    from sklearn.linear_model import LinearRegression
+    X = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+    y = np.array([13, 14, 15, 16])
+    model = LinearRegression()
+    scores = cross_validate(model, X, y, cv=5)
+    print(scores['train_score'])  # Example output: [list_of_train_scores]
     """
     if not isinstance(model, object):
         raise TypeError("model is not a valid regression model instance")
@@ -71,5 +77,3 @@ def cross_validate(model, X, y, cv=5, random_state=None):
         "fit_time": fit_time,
         "score_time": score_time,
     }
-
-
