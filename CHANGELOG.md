@@ -2,11 +2,32 @@
 
 
 
+## v0.4.2 (2024-02-03)
+
+### Unknown
+
+* Merge pull request #62 from UBC-MDS/docstring
+
+Docstring ([`aa07f9d`](https://github.com/UBC-MDS/OLS_regressor/commit/aa07f9d8484d03f8386055933d98b54dc59f0e88))
+
+* Merge pull request #64 from UBC-MDS/update_readme
+
+Update README.md ([`a65850d`](https://github.com/UBC-MDS/OLS_regressor/commit/a65850dc727f7a98baeb5e6b6a29e95bad9ac8fc))
+
+* Update README.md ([`42f6441`](https://github.com/UBC-MDS/OLS_regressor/commit/42f6441d6be4de5b107335850722f28c8b6b2349))
+
+
 ## v0.4.1 (2024-02-03)
 
 ### Fix
 
 * fix: add more badges to README.md ([`db43e9b`](https://github.com/UBC-MDS/OLS_regressor/commit/db43e9b59c0f8c9a7b1a3248b0996422197b578c))
+
+* fix: Feedback addressed by YimengXia ([`b36480e`](https://github.com/UBC-MDS/OLS_regressor/commit/b36480ef98463657eba036116af5634b8f1b2cde))
+
+* fix: Feedback addressed by YimengXia ([`03015c6`](https://github.com/UBC-MDS/OLS_regressor/commit/03015c63f7a133d1ce674fce9aafae526e495d11))
+
+* fix: Feedback addressed by YimengXia ([`8f83e2d`](https://github.com/UBC-MDS/OLS_regressor/commit/8f83e2dec948f70f9eaedbbae1f22f142df9be7b))
 
 ### Unknown
 

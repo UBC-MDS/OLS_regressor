@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ols_regressor"
-version = "0.4.1"
+version = "0.4.2"
 description = "Ausis Car Price Regressor"
 authors = ["Charles Xu"]
 license = "MIT"
