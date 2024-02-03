@@ -2,6 +2,19 @@
 
 
 
+## v0.4.1 (2024-02-03)
+
+### Fix
+
+* fix: add more badges to README.md ([`db43e9b`](https://github.com/UBC-MDS/OLS_regressor/commit/db43e9b59c0f8c9a7b1a3248b0996422197b578c))
+
+### Unknown
+
+* Merge pull request #63 from UBC-MDS/add_badges
+
+fix: add more badges to README.md ([`142610c`](https://github.com/UBC-MDS/OLS_regressor/commit/142610cb05dec1c85b51d5f4e1e078dd2c6a1617))
+
+
 ## v0.4.0 (2024-01-31)
 
 ### Feature
