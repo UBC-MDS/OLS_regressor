@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "ols_regressor"
 version = "0.4.0"
-description = "Ausis Car Price Regressor"
-authors = ["Charles Xu"]
+description = "OLS Regressor"
+authors = ["Charles Xu, Xia Yimeng, Sifan Zhang, Waleed Mahmood"]
 license = "MIT"
 readme = "README.md"
 
