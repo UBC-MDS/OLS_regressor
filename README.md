@@ -9,8 +9,8 @@
 ![version](https://img.shields.io/github/v/release/UBC-MDS/OLS_regressor) 
 ![release](https://img.shields.io/github/release-date/UBC-MDS/OLS_regressor)
 
-![OLS_Regressor](/docs/logo.jpg)
 
+<img src="/docs/logo.jpg" width="200" height="200">
 
 ## About
 
