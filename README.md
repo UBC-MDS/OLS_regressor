@@ -124,7 +124,7 @@ print("Cross-validation results:", results)
 To run the auto-test supported by `pytest`, simply run the following command in the terminal or commandline tools:
 
 ```bash
-pytest test/
+pytest tests/
 ```
 
 ## ✅ `OLS_Regressor` use in Python ecosystem
