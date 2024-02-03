@@ -10,12 +10,13 @@
 ![release](https://img.shields.io/github/release-date/UBC-MDS/OLS_regressor)
 
 ## About
+
 The OLS Regression Package is a Python library designed to streamline the process of performing Ordinary Least Squares (OLS) regression analysis. Whether you're a data scientist, researcher, or analyst, this package aims to provide a simple and efficient tool for fitting linear models to your data. It will fit a linear model with coefficients w = (w1, w2, ..., wn) to minimize Residual Sum of Squares (RSS) between the observed targets values in the dataset, and the targets predicted by the linear approximation for the examples in the dataset.
 
 ## Installation
 
 ```bash
-$ pip install ols_regressor
+pip install ols_regressor
 ```
 
 ## Functions
@@ -25,10 +26,71 @@ $ pip install ols_regressor
 - `score`: Calculates the coefficient of determination R-squared value for the prediction.
 - `cross_validate`: Performs cross-validated Ordinary Least Squares (OLS) regression.
 
+## Usage
+
+This guide provides a quick start to using the OLS_Regressor package, specifically the LinearRegressor class, to perform linear regression analysis. The package offers simple-to-use methods for fitting the model, making predictions, and evaluating the performance. For more details about the package, please see the [vingette](https://olsregressor.readthedocs.io/en/latest/?badge=latest) for detailed usage.
+
+### Importing the LinearRegressor
+
+```Python
+from OLS_Regressor.regressor import LinearRegressor
+from ols_regressor.cross_validate import cross_validate
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import make_regression
+```
+
+### Fitting the Model
+
+To fit the linear regression model, you need to have your dataset ready, typically split into features (X) and the target variable (y). Here's how you can fit the model:
+
+```Python
+# Assuming X and y are your features and target variable respectively
+regressor = LinearRegressor()
+regressor.fit(X, y)
+```
+
+### Making Predictions
+
+Once the model is trained, you can make predictions on new data:
+
+```Python
+# Assuming X_new represents new data
+predictions = regressor.predict(X_new)
+```
+
+### Evaluating the Model
+
+To evaluate the performance of your model, you can use the score method, which by default provides the R-squared value of the predictions:
+
+```Python
+# Evaluating the model on test data
+r_squared = regressor.score(X_test, y_test)
+print(f"R-squared: {r_squared}")
+```
+
+### Cross-Validation
+
+The OLS_Regressor package provides a cross_validate function to help evaluate the model's performance across different partitions of the dataset, ensuring a more robust assessment than using a single train-test split.
+
+To use cross_validate, you must first import it from the package, then provide it with your dataset and the model you wish to evaluate. Here's an example:
+
+```Python
+# Creating an instance of LinearRegressor
+model = LinearRegressor()
+
+# Performing cross-validation
+results = cross_validate(model, X, y, cv=5)  # cv is the number of folds
+
+# Printing the results
+print("Cross-validation results:", results)
+```
+
 ## `OLS_Regressor` use in Python ecosystem
+
 The OLS Regression Package seamlessly integrates into the rich Python ecosystem, offering a specialized solution for Ordinary Least Squares (OLS) regression analysis. While various Python libraries provide general-purpose machine learning and statistical functionalities, our package focuses specifically on the simplicity and efficiency of linear regression. scikit-learn is a widely used machine learning library that encompasses regression among its many capabilities [`scikit-learn`](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning). Our package distinguishes itself by providing a lightweight and user-friendly interface tailored for users seeking a straightforward solution for OLS regression without the overhead of extensive machine learning or statistical functionalities. If you find that your needs align more closely with a broader set of machine learning tools or comprehensive statistical modeling, scikit-learn or statsmodels may be suitable alternatives. As of [2024-01-12], no existing package caters specifically to OLS regression with our package's emphasis on simplicity and ease of use.
 
 ## Contributors
+
 - Xia Yimeng (@YimengXia)
 - Sifan Zhang (@Sifanzzz)
 - Charles Xu (@charlesxch)
