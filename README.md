@@ -53,12 +53,6 @@ Run the following command to install the package `ols_regressor`:
 poetry install
 ```
 
-## Running the tests for the package functions
-Navigate to the root directory of the project and run the following command in your terminal to run the tests for the functions:
-```bash
-pytest tests/*
-```
-
 ## 💡 Functions
 
 - `fit`: Fits the linear model according to the OLS mechanism.
