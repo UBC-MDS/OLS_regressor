@@ -12,10 +12,56 @@ class LinearRegressor():
     examples in the dataset.
     """
     def __init__(self):
+        """
+        Initializes a new instance of the LinearRegressor class.
+
+        Attributes
+        ----------
+        coef : numpy.ndarray or None
+            The coefficients of the linear regression model. It is initialized as 
+            None and gets its value after the `fit` method is successfully called.
+            The first element is the intercept, followed by the coefficients for 
+            each feature in the dataset.
+
+        Example
+        -------
+        lr = LinearRegressor()
+        lr.coef
+        """    
         self.coef = None
         pass
 
     def fit(self, X, y, lambda_reg=0.1):
+        """
+        Fits the linear regression model.
+
+        Parameters
+        ----------
+        X : array-like matrix of shape (n_samples, n_features)
+            Feature values that will be used to fit the linear regression model.
+
+        y : array-like matrix of shape (n_samples,)
+            Target values associated with each sample in X.
+
+        lambda_reg : float, optional
+            The regularization strength (L2 penalty). Must be a positive float. 
+            Larger values specify stronger regularization. The default value is 0.1.
+
+        Returns
+        -------
+        self : object
+            Returns the instance itself. The fitted linear regression model 
+            coefficients, the first element is the intercept, followed by the 
+            coefficients for each feature in the dataset.
+
+        Example
+        -------
+        X = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+        y = np.array([10, 11, 12])
+        lr = LinearRegressor()
+        lr.fit(X, y)
+        lr.coef
+        """
         X_np = np.array(X)
         y_np = np.array(y)
 
@@ -32,14 +78,11 @@ class LinearRegressor():
         if X_np.shape[0] < X_np.shape[1]:
             raise ValueError("The number of examples in X should be greater than the number of features.")
 
-        # Normalize input features
-        X_normalized = (X_np - X_np.mean(axis=0)) / X_np.std(axis=0)
-
         # Add a column of ones for the intercept term
-        X_normalized = np.hstack((np.ones((X_normalized.shape[0], 1)), X_normalized))
+        X_np = np.hstack((np.ones((X_np.shape[0], 1)), X_np))
 
         # Fit OLS with regularization (you can adjust the regularization parameter)
-        self.coef = np.linalg.inv(X_normalized.T @ X_normalized + lambda_reg * np.eye(X_normalized.shape[1])) @ X_normalized.T @ y_np
+        self.coef = np.linalg.inv(X_np.T @ X_np + lambda_reg * np.eye(X_np.shape[1])) @ X_np.T @ y_np
 
         return self.coef
 
@@ -56,6 +99,11 @@ class LinearRegressor():
         -------
         predictions : array-like matrix of shape (n_samples, n_targets)
             Predicted target values for the input feature values.
+
+        Example
+        -------
+        X_new = np.array([[2, 4, 6], [8, 10, 12]])
+        lr.predict(X_new)
         """
         if self.coef is None:
             raise ValueError("Model not fitted. Call fit first.")
@@ -104,6 +152,12 @@ class LinearRegressor():
         -------
         r2_score : float
             Coefficient of determination R^2.
+
+        Example
+        -------
+        X_test = np.array([[1, 3, 5], [7, 9, 0], [2, 4, 6]])
+        y_test = np.array([8, 10, 1])
+        lr.score(X_test, y_test)
         """
         # Ensure y is a numpy array
         y_true = np.array(y)

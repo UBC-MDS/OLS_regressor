@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "ols_regressor"
-version = "0.1.0"
-description = "Ausis Car Price Regressor"
-authors = ["Charles Xu"]
+version = "0.4.3"
+description = "An Ordinary Least Square Regressor"
+authors = ["Waleed Mahmood", "Yimeng Xia", "Charles Xu", "Sifan Zhang"]
 license = "MIT"
 readme = "README.md"
 
@@ -16,7 +16,19 @@ scikit-learn = "^1.4.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
+myst-nb = {version = "^1.0.0", python = "^3.9"}
+sphinx-autoapi = "^3.0.0"
+sphinx-rtd-theme = "^2.0.0"
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version",
+] 
+branch = "main"                             
+changelog_file = "CHANGELOG.md"             
+build_command = "pip install poetry && poetry build"   
